@@ -32,6 +32,15 @@ export class HitlApproval implements INodeType {
 				required: true,
 			},
 		],
+		webhooks: [
+			{
+				name: 'default',
+				httpMethod: 'POST',
+				responseMode: 'onReceived',
+				path: '',
+				restartWebhook: true,
+			},
+		],
 		properties: [
 			{
 				displayName: 'Template',
