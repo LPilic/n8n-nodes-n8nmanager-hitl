@@ -1,6 +1,6 @@
 {
   "name": "n8n-nodes-n8nmanager-hitl",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "n8n community node for Human-in-the-Loop approvals via n8n-library",
   "keywords": ["n8n-community-node-package", "n8n", "hitl", "approval", "human-in-the-loop"],
   "license": "MIT",

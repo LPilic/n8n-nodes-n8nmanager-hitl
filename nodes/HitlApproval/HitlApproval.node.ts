@@ -20,6 +20,7 @@ export class HitlApproval implements INodeType {
 		version: 1,
 		subtitle: '={{$parameter["templateSlug"]}}',
 		description: 'Send data for human review and wait for approval/rejection',
+		usableAsTool: true,
 		defaults: {
 			name: 'HITL Approval',
 		},
