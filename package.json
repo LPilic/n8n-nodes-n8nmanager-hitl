@@ -1,0 +1,31 @@
+{
+  "name": "n8n-nodes-n8nmanager-hitl",
+  "version": "0.1.0",
+  "description": "n8n community node for Human-in-the-Loop approvals via n8n-library",
+  "keywords": ["n8n-community-node-package", "n8n", "hitl", "approval", "human-in-the-loop"],
+  "license": "MIT",
+  "main": "dist/nodes/HitlApproval/HitlApproval.node.js",
+  "scripts": {
+    "build": "tsc && npm run copy-icons",
+    "copy-icons": "cp nodes/HitlApproval/*.svg dist/nodes/HitlApproval/ 2>/dev/null || true",
+    "dev": "tsc --watch",
+    "prepublishOnly": "npm run build"
+  },
+  "n8n": {
+    "n8nNodesApiVersion": 1,
+    "credentials": [
+      "dist/credentials/HitlApi.credentials.js"
+    ],
+    "nodes": [
+      "dist/nodes/HitlApproval/HitlApproval.node.js",
+      "dist/nodes/HitlTrigger/HitlTrigger.node.js"
+    ]
+  },
+  "peerDependencies": {
+    "n8n-workflow": "*"
+  },
+  "devDependencies": {
+    "n8n-workflow": "^1.64.0",
+    "typescript": "~5.4.0"
+  }
+}
